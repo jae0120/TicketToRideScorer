@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -230,8 +231,55 @@ public class MainActivity extends AppCompatActivity {
         displayBlackScore(blackPlayerScore);
     }
 
+    private String whoWon() {
+
+        if (redPlayerScore > greenPlayerScore) {
+            if (redPlayerScore > bluePlayerScore) {
+                if (redPlayerScore > yellowPlayerScore) {
+                    if (redPlayerScore > blackPlayerScore){
+                        return "Red Player Wins!";
+                    } else {
+                        return "Black Player Wins!";
+                    }
+                } else if (yellowPlayerScore > blackPlayerScore){
+                    return "Yellow Player Wins!";
+                }
+            } else if (bluePlayerScore > yellowPlayerScore){
+                if (bluePlayerScore > blackPlayerScore) {
+                    return "Blue Player Wins!";
+                } else if (yellowPlayerScore > blackPlayerScore) {
+                    return "Yellow Player Wins!";
+                } else {
+                    return "Black Player Wins!";
+                }
+            }
+        } else if (greenPlayerScore > bluePlayerScore){
+            if (greenPlayerScore > yellowPlayerScore) {
+                if (greenPlayerScore > blackPlayerScore) {
+                    return "Green Player Wins!";
+                }
+            } else if (yellowPlayerScore > blackPlayerScore) {
+                return "Yellow Player Wins!";
+            } else {
+                return "Black Player Wins!";
+            }
+        } if (bluePlayerScore > yellowPlayerScore) {
+            if (bluePlayerScore > blackPlayerScore) {
+                return "Blue Player Wins!";
+            } else {
+                return "Black Player Wins!";
+            }
+        } else if (yellowPlayerScore > blackPlayerScore) {
+            return "Yellow Player Wins!";
+        } else {
+            return "Black Player Wins!";
+        }
+
+    }
+
     //resets both score
     public void resetScores(View view) {
+        Toast.makeText(getApplicationContext(),whoWon(),Toast.LENGTH_SHORT).show();
         redPlayerScore = 1;
         greenPlayerScore = 1;
         bluePlayerScore = 1;
