@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/smallMargin"
             android:background="#50FFFFFF"
             android:gravity="center_horizontal"
             android:text="@string/app_title"
@@ -32,7 +32,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="@dimen/regMargin"
                 android:orientation="vertical">
                 <!--
                             <TextView
@@ -44,7 +44,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/regMargin"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -75,7 +75,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="32dp"
+                        android:layout_marginLeft="@dimen/largeMargin"
                         android:orientation="vertical">
 
                         <Button
@@ -102,15 +102,15 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/regMargin"
                     android:background="#CCFFE57F"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="16dp"
-                        android:text="Score: "
+                        android:layout_marginEnd="@dimen/regMargin"
+                        android:text="@string/score"
                         android:textColor="#F00"
                         android:textSize="28sp" />
 
@@ -118,7 +118,7 @@
                         android:id="@+id/red_score_text_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1"
+                        android:text=""
                         android:textColor="#F00"
                         android:textSize="28sp"
                         android:textStyle="bold" />
@@ -130,7 +130,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
+                android:layout_marginHorizontal="@dimen/regMargin"
                 android:orientation="vertical">
                 <!--
                             <TextView
@@ -142,7 +142,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/regMargin"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -173,7 +173,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="32dp"
+                        android:layout_marginLeft="@dimen/largeMargin"
                         android:orientation="vertical">
 
                         <Button
@@ -200,7 +200,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/regMargin"
                     android:background="#CCFFE57F"
 
                     android:orientation="horizontal">
@@ -208,8 +208,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="16dp"
-                        android:text="Score: "
+                        android:layout_marginRight="@dimen/regMargin"
+                        android:text="@string/score"
                         android:textColor="#1B5E20"
                         android:textSize="28sp" />
 
@@ -217,7 +217,7 @@
                         android:id="@+id/green_score_text_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1"
+                        android:text=""
                         android:textColor="#1B5E20"
                         android:textSize="28sp"
                         android:textStyle="bold" />
@@ -234,6 +234,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/regMargin"
                 android:orientation="vertical">
                 <!--
                             <TextView
@@ -245,7 +246,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/regMargin"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -276,7 +277,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="32dp"
+                        android:layout_marginLeft="@dimen/largeMargin"
                         android:orientation="vertical">
 
                         <Button
@@ -303,15 +304,15 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/regMargin"
                     android:background="#CCFFE57F"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="16dp"
-                        android:text="Score: "
+                        android:layout_marginRight="@dimen/regMargin"
+                        android:text="@string/score"
                         android:textColor="#0D47A1"
                         android:textSize="28sp" />
 
@@ -319,19 +320,119 @@
                         android:id="@+id/blue_score_text_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1"
+                        android:text=""
                         android:textColor="#0D47A1"
                         android:textSize="28sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#253E2723"
+                android:layout_marginLeft="@dimen/regMargin"
+                android:orientation="vertical">
+                <!--
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Player One"/>
+                                -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/regMargin"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/one_train_yellow"
+                            android:onClick="oneTrackYellow" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/two_train_yellow"
+                            android:onClick="twoTracksYellow" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/three_train_yellow"
+                            android:onClick="threeTracksYellow" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/largeMargin"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/four_train_yellow"
+                            android:onClick="fourTracksYellow" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/five_train_yellow"
+                            android:onClick="fiveTracksYellow" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/six_train_yellow"
+                            android:onClick="sixTracksYellow" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/regMargin"
+                    android:background="#CCFFE57F"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/regMargin"
+                        android:text="@string/score"
+                        android:textColor="#FFA000"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:id="@+id/yellow_score_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#FFA000"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#253E2723"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
             <!--
                         <TextView
@@ -343,7 +444,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/regMargin"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -354,46 +455,46 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/one_train_yellow"
-                        android:onClick="oneTrackYellow" />
+                        android:background="@drawable/one_train_black"
+                        android:onClick="oneTrackBlack" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/two_train_yellow"
-                        android:onClick="twoTracksYellow" />
+                        android:background="@drawable/two_train_black"
+                        android:onClick="twoTracksBlack" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/three_train_yellow"
-                        android:onClick="threeTracksYellow" />
+                        android:background="@drawable/three_train_black"
+                        android:onClick="threeTracksBlack" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
+                    android:layout_marginLeft="@dimen/largeMargin"
                     android:orientation="vertical">
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/four_train_yellow"
-                        android:onClick="fourTracksYellow" />
+                        android:background="@drawable/four_train_black"
+                        android:onClick="fourTracksBlack" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/five_train_yellow"
-                        android:onClick="fiveTracksYellow" />
+                        android:background="@drawable/five_train_black"
+                        android:onClick="fiveTracksBlack" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/six_train_yellow"
-                        android:onClick="sixTracksYellow" />
+                        android:background="@drawable/six_train_black"
+                        android:onClick="sixTracksBlack" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -401,138 +502,40 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/regMargin"
                 android:background="#CCFFE57F"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="16dp"
-                    android:text="Score: "
-                    android:textColor="#FFA000"
+                    android:layout_marginRight="@dimen/regMargin"
+                    android:text="@string/score"
+                    android:textColor="#000"
                     android:textSize="28sp" />
 
                 <TextView
-                    android:id="@+id/yellow_score_text_view"
+                    android:id="@+id/black_score_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"
-                    android:textColor="#FFA000"
+                    android:text=""
+                    android:textColor="#000"
                     android:textSize="28sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
         </LinearLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
-        <!--
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="Player One"/>
-                        -->
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <Button
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:orientation="horizontal">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="@dimen/regMargin"
+            android:background="@android:color/holo_orange_light"
+            android:onClick="resetScores"
+            android:text="@string/new_game"
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/one_train_black"
-                    android:onClick="oneTrackBlack" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/two_train_black"
-                    android:onClick="twoTracksBlack" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/three_train_black"
-                    android:onClick="threeTracksBlack" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
-                android:orientation="vertical">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/four_train_black"
-                    android:onClick="fourTracksBlack" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/five_train_black"
-                    android:onClick="fiveTracksBlack" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/six_train_black"
-                    android:onClick="sixTracksBlack" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="#CCFFE57F"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
-                android:text="Score: "
-                android:textColor="#000"
-                android:textSize="28sp" />
-
-            <TextView
-                android:id="@+id/black_score_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1"
-                android:textColor="#000"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
+            />
     </LinearLayout>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="16dp"
-        android:background="@android:color/holo_orange_light"
-        android:onClick="resetScores"
-        android:text="New Game"
-
-        />
-</LinearLayout></ScrollView>
+</ScrollView>

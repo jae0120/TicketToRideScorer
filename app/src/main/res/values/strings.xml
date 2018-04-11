@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">TicketToRideScorer</string>
     <string name="app_title">Let\'s Play Ticket to Ride!</string>
+    <string name="score">Score:</string>
+    <string name="new_game">New Game</string>
+    <string name="RedWinner">Red Player Wins!</string>
+    <string name="BlackWinner">Black Player Wins!</string>
+    <string name="YellowWins">Yellow Player Wins!</string>
+    <string name="BlueWinner">Blue Player Wins!</string>
+    <string name="GreenWinner">Green Player Wins!</string>
 </resources>

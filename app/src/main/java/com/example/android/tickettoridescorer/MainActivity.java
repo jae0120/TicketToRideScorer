@@ -8,46 +8,54 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    static int redPlayerScore = 1;
+    static int greenPlayerScore = 1;
+    static int bluePlayerScore = 1;
+    static int yellowPlayerScore = 1;
+    static int blackPlayerScore = 1;
+
+    private int red;
+    private TextView redTextView;
+    private TextView greenTextView;
+    private TextView blueTextView;
+    private TextView yellowTextView;
+    private TextView blackTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        redTextView = findViewById(R.id.red_score_text_view);
+        greenTextView = findViewById(R.id.green_score_text_view);
+        blueTextView = findViewById(R.id.blue_score_text_view);
+        yellowTextView = findViewById(R.id.yellow_score_text_view);
+        blackTextView = findViewById(R.id.black_score_text_view);
     }
 
-    int redPlayerScore = 1;
-    int greenPlayerScore = 1;
-    int bluePlayerScore = 1;
-    int yellowPlayerScore = 1;
-    int blackPlayerScore = 1;
 
     // display Red's Score
     private void displayRedScore(int redScore) {
-        TextView redScoreText = (TextView) findViewById(R.id.red_score_text_view);
-        redScoreText.setText("" + redScore);
+        redTextView.setText("" + redScore);
     }
 
     // display Green's Score
     private void displayGreenScore(int greenScore) {
-        TextView greenScoreText = (TextView) findViewById(R.id.green_score_text_view);
-        greenScoreText.setText("" + greenScore);
+        greenTextView.setText("" + greenScore);
     }
 
     // display Blue's Score
     private void displayBlueScore(int blueScore) {
-        TextView blueScoreText = (TextView) findViewById(R.id.blue_score_text_view);
-        blueScoreText.setText("" + blueScore);
+        blueTextView.setText("" + blueScore);
     }
 
     // display Yellow's Score
     private void displayYellowScore(int yellowScore) {
-        TextView yellowScoreText = (TextView) findViewById(R.id.yellow_score_text_view);
-        yellowScoreText.setText("" + yellowScore);
+        yellowTextView.setText("" + yellowScore);
     }
 
     // display Black's Score
     private void displayBlackScore(int blackScore) {
-        TextView blackScoreText = (TextView) findViewById(R.id.black_score_text_view);
-        blackScoreText.setText("" + blackScore);
+        blackTextView.setText("" + blackScore);
     }
 
     // add one to Red's Score for one track
@@ -237,42 +245,42 @@ public class MainActivity extends AppCompatActivity {
             if (redPlayerScore > bluePlayerScore) {
                 if (redPlayerScore > yellowPlayerScore) {
                     if (redPlayerScore > blackPlayerScore){
-                        return "Red Player Wins!";
+                        return getString(R.string.RedWinner);
                     } else {
-                        return "Black Player Wins!";
+                        return getString(R.string.BlackWinner);
                     }
                 } else if (yellowPlayerScore > blackPlayerScore){
-                    return "Yellow Player Wins!";
+                    return getString(R.string.YellowWins);
                 }
             } else if (bluePlayerScore > yellowPlayerScore){
                 if (bluePlayerScore > blackPlayerScore) {
-                    return "Blue Player Wins!";
+                    return getString(R.string.BlueWinner);
                 } else if (yellowPlayerScore > blackPlayerScore) {
-                    return "Yellow Player Wins!";
+                    return getString(R.string.YellowWins);
                 } else {
-                    return "Black Player Wins!";
+                    return getString(R.string.BlackWinner);
                 }
             }
         } else if (greenPlayerScore > bluePlayerScore){
             if (greenPlayerScore > yellowPlayerScore) {
                 if (greenPlayerScore > blackPlayerScore) {
-                    return "Green Player Wins!";
+                    return getString(R.string.GreenWinner);
                 }
             } else if (yellowPlayerScore > blackPlayerScore) {
-                return "Yellow Player Wins!";
+                return getString(R.string.YellowWins);
             } else {
-                return "Black Player Wins!";
+                return getString(R.string.BlackWinner);
             }
         } if (bluePlayerScore > yellowPlayerScore) {
             if (bluePlayerScore > blackPlayerScore) {
-                return "Blue Player Wins!";
+                return getString(R.string.BlueWinner);
             } else {
-                return "Black Player Wins!";
+                return getString(R.string.BlackWinner);
             }
         } else if (yellowPlayerScore > blackPlayerScore) {
-            return "Yellow Player Wins!";
+            return getString(R.string.YellowWins);
         } else {
-            return "Black Player Wins!";
+            return getString(R.string.BlackWinner);
         }
 
     }
